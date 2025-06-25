@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JobKings - Candidate Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Job Application - JobKings 👑</h1>
+
+    <form id="jobForm">
+      <label>Full Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required>
+
+      <label>Upload Resume (PDF):</label>
+      <input type="file" name="resume" accept=".pdf" required>
+
+      <label>Address:</label>
+      <textarea name="address" rows="3" required></textarea>
+
+      <label>Preferred Work Type:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="work_type" value="Remote" required> Remote</label>
+        <label><input type="radio" name="work_type" value="Hybrid"> Hybrid</label>
+        <label><input type="radio" name="work_type" value="Onsite"> Onsite</label>
+      </div>
+
+      <label>Preferred Location (Teleperformance India):</label>
+      <select name="location" required>
+        <option value="">-- Select --</option>
+        <option>Noida</option>
+        <option>Jaipur</option>
+        <option>Hyderabad</option>
+        <option>Indore</option>
+        <option>Gurgaon</option>
+        <option>Mumbai</option>
+        <option>Pune</option>
+        <option>Ahmedabad</option>
+        <option>Mohali</option>
+        <option>Kolkata</option>
+      </select>
+
+      <label>Willing to Relocate?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="relocate" value="Yes" required> Yes</label>
+        <label><input type="radio" name="relocate" value="No"> No</label>
+      </div>
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
