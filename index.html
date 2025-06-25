@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JobKings - Candidate Form</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <div class="container">
     <h1>Job Application - JobKings 👑</h1>
-
     <form id="jobForm">
       <label>Full Name:</label>
-      <input type="text" name="name" required>
+      <input type="text" name="name" required />
 
       <label>Email:</label>
-      <input type="email" name="email" required>
+      <input type="email" name="email" required />
 
       <label>Phone Number:</label>
-      <input type="tel" name="phone" required>
+      <input type="tel" name="phone" required />
+
+      <label>WhatsApp Number:</label>
+      <input type="tel" name="whatsapp" required />
+
+      <label>Aadhaar Card Number:</label>
+      <input
+        type="text"
+        name="aadhaar"
+        maxlength="12"
+        pattern="\d{12}"
+        title="Enter 12 digit Aadhaar number"
+        required
+      />
+
+      <label>Referred By:</label>
+      <input
+        type="text"
+        name="referred_by"
+        placeholder="Name or Employee ID (if any)"
+      />
 
       <label>Upload Resume (PDF):</label>
-      <input type="file" name="resume" accept=".pdf" required>
+      <input type="file" name="resume" accept=".pdf" required />
 
       <label>Address:</label>
       <textarea name="address" rows="3" required></textarea>
 
+      <label>Highest Qualification:</label>
+      <select name="qualification" required>
+        <option value="">-- Select --</option>
+        <option>10th</option>
+        <option>12th</option>
+        <option>Graduate</option>
+        <option>Postgraduate</option>
+        <option>Other</option>
+      </select>
+
+      <label>Years of Experience:</label>
+      <select name="experience" required>
+        <option value="">-- Select --</option>
+        <option>Fresher</option>
+        <option>0–1 year</option>
+        <option>1–2 years</option>
+        <option>2–5 years</option>
+        <option>5+ years</option>
+      </select>
+
+      <label>Languages Spoken:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="languages" value="English" /> English</label>
+        <label><input type="checkbox" name="languages" value="Hindi" /> Hindi</label>
+        <label><input type="checkbox" name="languages" value="Other" /> Other</label>
+      </div>
+
       <label>Preferred Work Type:</label>
       <div class="radio-group">
-        <label><input type="radio" name="work_type" value="Remote" required> Remote</label>
-        <label><input type="radio" name="work_type" value="Hybrid"> Hybrid</label>
-        <label><input type="radio" name="work_type" value="Onsite"> Onsite</label>
+        <label><input type="radio" name="work_type" value="Remote" required /> Remote</label>
+        <label><input type="radio" name="work_type" value="Hybrid" /> Hybrid</label>
+        <label><input type="radio" name="work_type" value="Onsite" /> Onsite</label>
       </div>
 
       <label>Preferred Location (Teleperformance India):</label>
@@ -51,8 +96,8 @@
 
       <label>Willing to Relocate?</label>
       <div class="radio-group">
-        <label><input type="radio" name="relocate" value="Yes" required> Yes</label>
-        <label><input type="radio" name="relocate" value="No"> No</label>
+        <label><input type="radio" name="relocate" value="Yes" required /> Yes</label>
+        <label><input type="radio" name="relocate" value="No" /> No</label>
       </div>
 
       <button type="submit">Submit Application</button>

@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -28,13 +28,13 @@ form label {
   display: block;
   margin: 15px 0 5px;
   color: #333;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="file"],
+form input[type='text'],
+form input[type='email'],
+form input[type='tel'],
+form input[type='file'],
 form textarea,
 form select {
   width: 100%;
@@ -43,10 +43,12 @@ form select {
   border-radius: 5px;
 }
 
-.radio-group {
+.radio-group,
+.checkbox-group {
   display: flex;
   gap: 20px;
   margin-top: 8px;
+  flex-wrap: wrap;
 }
 
 button {
@@ -59,6 +61,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 button:hover {
@@ -68,6 +71,6 @@ button:hover {
 #message {
   margin-top: 20px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   color: green;
 }
